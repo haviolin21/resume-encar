@@ -1,0 +1,8 @@
+# Firebase
+firebase-debug.log
+.firebase/
+
+# IDE/System
+.vscode/
+.DS_Store
+node_modules/
