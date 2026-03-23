@@ -51,7 +51,7 @@ body {
 /* Header */
 .header {
     height: var(--header-height);
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(20px);
     position: fixed;
     top: 0;
@@ -60,10 +60,6 @@ body {
     z-index: 1000;
     display: flex;
     align-items: center;
-    transition: var(--transition);
-}
-
-.header--scrolled {
     border-bottom: 1px solid var(--border-color);
 }
 
@@ -75,24 +71,29 @@ body {
 }
 
 .logo {
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 900;
-    letter-spacing: -0.5px;
+    letter-spacing: -1px;
+    color: var(--text-color);
 }
 
 .logo span {
-    color: var(--primary-color);
+    color: var(--text-muted);
+    font-weight: 500;
+    margin-left: 4px;
 }
 
 .nav__list {
     display: flex;
-    gap: 40px;
+    gap: 30px;
+    list-style: none; /* 점 제거 확실히 */
 }
 
 .nav__link {
     font-size: 14px;
-    font-weight: 700;
-    color: var(--text-secondary);
+    font-weight: 800;
+    color: var(--text-color);
+    letter-spacing: -0.5px;
     transition: var(--transition);
 }
 
