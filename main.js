@@ -106,6 +106,23 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
+    // 6. Back to Top Logic
+    const backToTopBtn = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            backToTopBtn.classList.add('show');
+        } else {
+            backToTopBtn.classList.remove('show');
+        }
+    });
+
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
     // Reveal CSS
     const style = document.createElement('style');
     style.textContent = `

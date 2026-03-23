@@ -505,11 +505,42 @@ a {
     transform: translateY(0) !important;
 }
 
+/* Back to Top Button */
+#back-to-top {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--text-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: 900;
+    cursor: pointer;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+#back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#back-to-top:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-5px);
+}
+
 @media (max-width: 768px) {
     .container { padding: 0 24px; }
     .hero__title { font-size: 40px; }
-    .timeline__item { grid-template-columns: 1fr; gap: 10px; }
-    .competencies { grid-template-columns: 1fr; gap: 20px; }
-    .projects__grid { grid-template-columns: 1fr; }
-    .modal { padding: 40px 24px; }
+    #back-to-top { bottom: 24px; right: 24px; width: 40px; height: 40px; font-size: 16px; }
 }
