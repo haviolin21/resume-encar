@@ -2,13 +2,13 @@
     --primary-color: #FF2100;
     --primary-hover: #E61E00;
     --text-color: #000000;
-    --text-secondary: #666666;
-    --text-muted: #999999;
+    --text-secondary: #444444;
+    --text-muted: #888888;
     --bg-color: #FFFFFF;
     --bg-secondary: #F5F5F5;
     --bg-dark: #111111;
-    --border-color: #EAEAEA;
-    --container-width: 1000px;
+    --border-color: #EEEEEE;
+    --container-width: 900px;
     --header-height: 70px;
     --transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
@@ -45,7 +45,7 @@ body {
 .container {
     max-width: var(--container-width);
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 30px;
 }
 
 /* Header */
@@ -73,7 +73,7 @@ body {
 .logo {
     font-size: 18px;
     font-weight: 900;
-    letter-spacing: -1px;
+    letter-spacing: -0.5px;
     color: var(--text-color);
 }
 
@@ -86,15 +86,13 @@ body {
 .nav__list {
     display: flex;
     gap: 30px;
-    list-style: none; /* 점 제거 확실히 */
+    list-style: none;
 }
 
 .nav__link {
     font-size: 14px;
     font-weight: 800;
     color: var(--text-color);
-    letter-spacing: -0.5px;
-    transition: var(--transition);
 }
 
 .nav__link:hover {
@@ -102,14 +100,13 @@ body {
 }
 
 .btn {
-    padding: 10px 20px;
-    border-radius: 2px; /* Encar style: sharper corners */
+    padding: 8px 16px;
+    border-radius: 2px;
     font-weight: 700;
     font-size: 13px;
     cursor: pointer;
     transition: var(--transition);
     border: none;
-    text-transform: uppercase;
 }
 
 .btn--primary {
@@ -117,21 +114,9 @@ body {
     color: white;
 }
 
-.btn--outline {
-    background-color: transparent;
-    border: 1px solid var(--border-color);
-    color: var(--text-secondary);
-}
-
-.btn--outline:hover {
-    background-color: var(--text-color);
-    color: white;
-    border-color: var(--text-color);
-}
-
 /* Sections */
 .section {
-    padding: 120px 0;
+    padding: 100px 0;
 }
 
 .section--bg {
@@ -139,32 +124,31 @@ body {
 }
 
 .section__title {
-    font-size: 40px;
+    font-size: 36px;
     font-weight: 900;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
     letter-spacing: -1.5px;
     line-height: 1.1;
 }
 
-/* Hero (About Encar Style) */
+/* Hero */
 .hero {
-    padding: 200px 0 120px;
-    background-color: var(--bg-color);
+    padding: 180px 0 100px;
 }
 
 .hero__label {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 800;
     color: var(--primary-color);
-    margin-bottom: 30px;
+    margin-bottom: 24px;
     display: block;
 }
 
 .hero__title {
-    font-size: 72px;
+    font-size: 64px;
     font-weight: 900;
     line-height: 1.1;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
     letter-spacing: -3px;
 }
 
@@ -173,15 +157,15 @@ body {
 }
 
 .hero__info {
-    font-size: 20px;
+    font-size: 18px;
     color: var(--text-secondary);
     font-weight: 500;
 }
 
 .hero__tags {
-    margin-top: 40px;
+    margin-top: 30px;
     display: flex;
-    gap: 15px;
+    gap: 12px;
 }
 
 .tag {
@@ -190,93 +174,69 @@ body {
     color: var(--text-muted);
 }
 
-/* Philosophy Section (New) */
+/* Philosophy Section */
 .philosophy {
     background-color: var(--text-color);
     color: white;
-    padding: 150px 0;
+    padding: 120px 0;
     text-align: center;
 }
 
 .philosophy__text {
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 800;
     line-height: 1.4;
-    max-width: 800px;
+    max-width: 750px;
     margin: 0 auto;
-    letter-spacing: -1px;
 }
 
 .philosophy__text span {
     color: var(--primary-color);
 }
 
-/* About */
-.about__content {
-    max-width: 800px;
-}
-
-.about__text {
-    font-size: 20px;
-    color: var(--text-secondary);
-    margin-bottom: 30px;
-    line-height: 1.7;
-    font-weight: 500;
-}
-
-.about__text strong {
-    color: var(--text-color);
-    font-weight: 800;
-}
-
 /* Experience */
 .timeline {
     display: flex;
     flex-direction: column;
-    gap: 80px;
+    gap: 60px;
 }
 
 .timeline__item {
     display: grid;
-    grid-template-columns: 240px 1fr;
-    gap: 60px;
+    grid-template-columns: 200px 1fr;
+    gap: 40px;
 }
 
 .timeline__company {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 900;
-    margin-bottom: 10px;
-    letter-spacing: -0.5px;
 }
 
 .badge {
     font-size: 10px;
-    padding: 3px 10px;
+    padding: 2px 6px;
     background-color: var(--primary-color);
     color: white;
     font-weight: 800;
-    margin-left: 5px;
-    vertical-align: middle;
+    border-radius: 2px;
+    margin-left: 4px;
 }
 
 .timeline__role {
     font-weight: 800;
     font-size: 16px;
-    color: var(--text-color);
     margin-bottom: 5px;
 }
 
 .timeline__date {
-    font-size: 14px;
+    font-size: 13px;
     color: var(--text-muted);
-    font-weight: 500;
 }
 
 .list li {
-    font-size: 16px;
-    margin-bottom: 12px;
+    font-size: 15px;
+    margin-bottom: 10px;
     color: var(--text-secondary);
-    line-height: 1.6;
 }
 
 .text-highlight {
@@ -284,16 +244,42 @@ body {
     font-weight: 800;
 }
 
+/* Tags Style (RESTORED & PRETTIFIED) */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 15px;
+}
+
+.tags span {
+    font-size: 11px;
+    font-weight: 800;
+    padding: 4px 10px;
+    background-color: var(--bg-secondary);
+    color: var(--text-secondary);
+    border-radius: 2px;
+    border: 1px solid #eee;
+    text-transform: uppercase;
+    transition: var(--transition);
+}
+
+.tags span:hover {
+    background-color: var(--text-color);
+    color: white;
+    border-color: var(--text-color);
+}
+
 /* Project Summary Cards */
 .projects__grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
+    gap: 30px;
 }
 
 .project-summary-card {
     background-color: var(--bg-color);
-    padding: 50px;
+    padding: 40px;
     cursor: pointer;
     transition: var(--transition);
     border: 1px solid var(--border-color);
@@ -301,38 +287,35 @@ body {
 
 .project-summary-card:hover {
     border-color: var(--text-color);
-    background-color: var(--text-color);
-    color: white;
-}
-
-.project-summary-card:hover .project-summary-card__label,
-.project-summary-card:hover .project-summary-card__more,
-.project-summary-card:hover .project-summary-card__desc {
-    color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
 .project-summary-card__label {
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 800;
     color: var(--primary-color);
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .project-summary-card__title {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 900;
-    margin-bottom: 20px;
-    letter-spacing: -0.5px;
+    margin-bottom: 15px;
 }
 
 .project-summary-card__desc {
-    font-size: 15px;
+    font-size: 14px;
     color: var(--text-secondary);
-    margin-bottom: 40px;
-    line-height: 1.6;
+    margin-bottom: 25px;
 }
 
-/* Modals */
+.project-summary-card__more {
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--primary-color);
+}
+
+/* Modals (RESTORED & FIXED) */
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -358,7 +341,7 @@ body {
     background-color: var(--bg-color);
     z-index: 3001;
     display: none;
-    padding: 80px;
+    padding: 60px;
     overflow-y: auto;
     opacity: 0;
     transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
@@ -372,9 +355,9 @@ body {
 
 .modal__close {
     position: absolute;
-    top: 30px;
-    right: 30px;
-    font-size: 40px;
+    top: 24px;
+    right: 24px;
+    font-size: 36px;
     background: none;
     border: none;
     cursor: pointer;
@@ -382,54 +365,22 @@ body {
     line-height: 1;
 }
 
-.modal__label {
-    font-size: 12px;
-    font-weight: 800;
-    color: var(--primary-color);
-    margin-bottom: 20px;
-    text-transform: uppercase;
-}
-
 .modal__title {
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 900;
-    letter-spacing: -1px;
-    margin-bottom: 40px;
-}
-
-.modal__date {
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--text-muted);
-    margin-left: 10px;
-}
-
-.modal__section {
-    margin-bottom: 40px;
-}
-
-.modal__section h3 {
-    font-size: 14px;
-    font-weight: 900;
-    margin-bottom: 15px;
-    color: var(--text-color);
-    text-transform: uppercase;
-}
-
-.modal__section p, .modal__section li {
-    font-size: 16px;
-    color: var(--text-secondary);
-    line-height: 1.7;
+    margin-bottom: 30px;
 }
 
 .modal__section--summary {
     background-color: var(--bg-secondary);
-    padding: 40px;
-    border-left: 8px solid var(--primary-color);
+    padding: 30px;
+    border-left: 6px solid var(--primary-color);
+    margin-bottom: 40px;
 }
 
 .summary-list li {
-    margin-bottom: 12px !important;
+    font-size: 14px !important;
+    margin-bottom: 10px !important;
 }
 
 .summary-list li strong {
@@ -438,57 +389,25 @@ body {
     width: 90px;
 }
 
-/* Tags Style */
-.tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 25px;
-}
-
-.tags span {
-    font-size: 11px;
-    font-weight: 800;
-    padding: 4px 12px;
-    background-color: var(--bg-secondary);
-    color: var(--text-secondary);
-    border-radius: 2px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    transition: var(--transition);
-}
-
-.tags span:hover {
-    background-color: var(--text-color);
-    color: white;
-}
-
 /* Footer */
 .footer {
-    padding: 120px 0;
+    padding: 100px 0;
     background-color: var(--bg-dark);
     color: white;
+    text-align: center;
 }
 
 .footer__title {
-    font-size: 48px;
+    font-size: 32px;
     font-weight: 900;
-    margin-bottom: 30px;
-    letter-spacing: -2px;
-}
-
-.footer__text {
-    font-size: 20px;
-    color: var(--text-muted);
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 .footer__contact a {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 800;
     color: white;
     border-bottom: 2px solid var(--primary-color);
-    padding-bottom: 5px;
 }
 
 /* Animations */
@@ -497,15 +416,9 @@ body {
     transform: translateY(0) !important;
 }
 
-@media (max-width: 1024px) {
-    .hero__title { font-size: 56px; }
-}
-
 @media (max-width: 768px) {
-    .container { padding: 0 24px; }
-    .hero__title { font-size: 40px; letter-spacing: -1.5px; }
-    .section__title { font-size: 32px; }
-    .timeline__item { grid-template-columns: 1fr; gap: 20px; }
+    .hero__title { font-size: 44px; }
+    .timeline__item { grid-template-columns: 1fr; gap: 10px; }
     .projects__grid { grid-template-columns: 1fr; }
     .modal { padding: 40px 24px; }
 }
